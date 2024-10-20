@@ -4,8 +4,8 @@ from flask import Flask, request
 
 from diabetes_predictor import DiabetesPredictor
 
-app = Flask(__name__)
-app.config["DEBUG"] = True
+app = Flask(__name__) # __name__ is a special python command which is used to figure out the root path of the application
+app.config["DEBUG"] = True # enables debug mode, allowing the application to automatically reload when changes are made.
 
 
 @app.route('/diabetes_predictor/', methods=['POST']) # path of the endpoint. Except only HTTP POST request
